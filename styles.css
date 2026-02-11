@@ -1,5 +1,5 @@
 :root{
-  --ink: #25282E;
+  --ink: #000000;
   --sun: #FECD01;
   --sand: #C1B696;
   --radius: 18px;
@@ -8,15 +8,15 @@
 html { scroll-behavior: smooth; }
 
 body{
-  font-family: "calder-lc", sans-serif;
-  font-weight: 400;
+  font-family: "museo", serif;
+  font-weight: 300;
   font-style: normal;
   color: var(--ink);
 }
 h1, h2, h3, h4, h5, h6{
-font-family: "museo", serif;
-font-weight: 700;
-font-style: normal;
+  font-family: "museo", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* Utility-ish */
@@ -77,20 +77,15 @@ font-style: normal;
   display: block;
 }
 
-.hero-caption{
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 14px 16px;
-  background: #fecb01b0;
-  color: #fff;
-  font-size: 0.9rem;
+/* Yellow overlay styling */
+.hero-caption-box {
+  background-color: rgba(254, 205, 1, 0.70);
+  color: #000000;
+  max-width: 420px;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
-/* =========================
-   Happening
-   ========================= */
 .happening-copy{
   max-width: 560px;
 }
