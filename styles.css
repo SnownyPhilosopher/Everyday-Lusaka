@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6{
 
 /* Yellow overlay styling */
 .hero-caption-box {
-  background-color: rgba(254, 205, 1, 0.70);
+  background-color: rgba(254, 205, 1, 1);
   color: #000000;
   max-width: 420px;
   font-weight: 600;
