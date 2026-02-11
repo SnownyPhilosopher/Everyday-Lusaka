@@ -118,8 +118,17 @@ h1, h2, h3, h4, h5, h6{
   border-radius: 999px;
 }
 
-.poster-frame{
+.poster-frame {
   overflow: hidden;
+}
+
+.poster-image {
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+/* Slow pop-out effect */
+.poster-frame:hover .poster-image {
+  transform: scale(1.06);
 }
 
 .poster-image{
@@ -310,3 +319,18 @@ h1, h2, h3, h4, h5, h6{
   }
 }
 
+.contact-btn {
+  display: inline-block;
+  padding: 12px 2px;
+  color: #FECD01;
+  background-color: transparent;
+  letter-spacing: .12em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover invert */
+.contact-btn:hover {
+  background-color: #FECD01;
+  color: #ffffff;
+}
