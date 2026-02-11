@@ -328,19 +328,18 @@ h1, h2, h3, h4, h5, h6{
 
 /* This is the "locked" image */
 #heroCarousel .carousel-bg{
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* the lock/parallax effect */
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
 }
 
-/* Black tint overlay */
 #heroCarousel .carousel-bg::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25); /* adjust darkness here */
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.45);
 }
 
 /* Keep your caption above the image */
