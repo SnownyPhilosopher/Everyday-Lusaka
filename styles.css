@@ -366,6 +366,37 @@ h4, h5, h6 {
     background-attachment: scroll;
   }
 }
+.hero-single{
+  height: 85vh;
+  overflow: hidden;
+}
+
+.hero-single-bg{
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Black tint */
+.hero-single-bg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.45);
+}
+
+
+/* Mobile: drop caption below image if needed */
+@media (max-width: 768px){
+  .hero-single{ height: auto; }
+  .hero-single-bg{ position: relative; height: 55vh; }
+  .hero-caption-box{
+    position: static;
+    transform: none;
+    margin: 16px;
+  }
+}
 
 
 .contact-btn {
@@ -382,4 +413,69 @@ h4, h5, h6 {
 .contact-btn:hover {
   background-color: #FECD01;
   color: #ffffff;
+}
+.exhibit-row-card{
+  overflow: hidden;
+  background: #fff;
+}
+
+.exhibit-row-media{
+  height: 100%;
+  min-height: 240px;
+  overflow: hidden;
+}
+
+.exhibit-row-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s ease;
+}
+
+.exhibit-row-card:hover .exhibit-row-media img{
+  transform: scale(1.05);
+}
+
+.exhibit-row-body{
+  padding: 22px;
+}
+
+.exhibit-row-title{
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+
+.exhibit-row-meta{
+  opacity: .8;
+  letter-spacing: .04em;
+}
+
+.contact-panel{
+  padding: 24px;
+  background: #fff;
+}
+
+.contact-link-plain{
+  color: #25282E;
+  text-decoration: none;
+}
+
+.contact-link-plain:hover{
+  text-decoration: underline;
+}
+
+.map-wrap{
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(37,40,46,.12);
+  min-height: 420px;
+}
+
+.map-wrap iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
