@@ -20,40 +20,64 @@
 
   <!-- NAV SECTION (Navbar + Hero) -->
   <header class="" >
-    <nav class="navbar nav-hero-section navbar-expand-lg sticky-top navbar-light py-1">
-      <div class="container">
+<nav class="navbar nav-hero-section navbar-expand-lg sticky-top navbar-light py-1">
+  <div class="container">
 
-        <!-- Logo placeholder (replace later) -->
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img 
-            src="assets\img\Everyday-Lusaka-Gallery-Black-2048x1448.png" 
-            alt="Everyday Lusaka Logo" 
-            class="navbar-logo"
-        >
-        </a>
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img
+        src="assets/img/Everyday-Lusaka-Gallery-Black-2048x1448.png"
+        alt="Everyday Lusaka Logo"
+        class="navbar-logo"
+      >
+    </a>
 
+    <!-- Mobile toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
 
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-            <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="happening.html">Happening</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="happened.html">Happened</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="contact.html">Location</a>
-            </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="happening.html">Happening</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="happened.html">Happened</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="contact.html">Location</a>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom dropdown-toggle"
+             href="#"
+             id="exploreDropdown"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Explore
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end rounded-0" aria-labelledby="exploreDropdown">
+            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+            <li><a class="dropdown-item" href="artists.html">Artists</a></li>
+            <li><a class="dropdown-item" href="publications.html">Publications</a></li>
           </ul>
-        </div>
+        </li>
 
-      </div>
-    </nav>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
 
     <!-- Hero image -->
 <div id="heroCarousel" class="carousel slide carousel-fade position-relative" data-bs-ride="carousel">
@@ -143,7 +167,7 @@
       <div class="row g-4">
         <!-- Event Card 1 -->
         <div class="col-md-6 col-lg-4">
-          <a class="event-card" href="#" aria-label="Event: Alick Phiri x William Matala">
+          <a class="event-card" href="happened.html#alick-william" aria-label="Event: Alick Phiri x William Matala">
             <div class="event-image-wrap">
               <img
                 src="assets\img\IMG_9688__Image-by-MaingailaMuvundika-2048x1365.jpg"
@@ -159,7 +183,7 @@
 
         <!-- Event Card 2 -->
         <div class="col-md-6 col-lg-4">
-          <a class="event-card" href="#" aria-label="Event: Ulendo: A Search for Belonging">
+          <a class="event-card" href="happened.html#ulendo" aria-label="Event: Ulendo: A Search for Belonging">
             <div class="event-image-wrap">
               <img
                 src="assets\img\IMG_2702-2048x1365.jpg"
@@ -175,7 +199,7 @@
 
         <!-- Event Card 3 -->
         <div class="col-md-6 col-lg-4">
-          <a class="event-card" href="#" aria-label="Event: Lost Garden & Eaten Apples">
+          <a class="event-card" href="happened.html#lost-garden" aria-label="Event: Lost Garden & Eaten Apples">
             <div class="event-image-wrap">
               <img
                 src="assets\img\Edit-9840-2048x1365.jpg"
