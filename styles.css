@@ -46,7 +46,6 @@ h4, h5, h6 {
    ========================= */
 .nav-hero-section{
   background: var(--sun);
-  border: 1px solid #000;
 }
 
 .logo-placeholder{
@@ -105,9 +104,8 @@ h4, h5, h6 {
 
 /* Yellow overlay styling */
 .hero-caption-box {
-  background-color: rgba(254, 205, 1, .90);
-  color: #000000;
-  max-width: 420px;
+  color: #ffffff;
+  max-width: 560px;
   font-weight: 300;
   line-height: 1.5;
   position: absolute;
@@ -426,8 +424,8 @@ h4, h5, h6 {
 
 /* IMAGE BIG + FLUSH LEFT */
 .exhibit-row-media{
-  height: 100%;
   min-height: 360px;
+  max-height: 520px;
   overflow: hidden;
 }
 
@@ -536,4 +534,16 @@ h4, h5, h6 {
   background: #FECD01;
   color: #25282E;
   border-color: #FECD01;
+}
+
+.artist-bio{
+  padding: 40px 40px 42px;
+}
+
+.artist-bio p{
+  margin-bottom: 12px;
+}
+
+.artist-bio p:last-child{
+  margin-bottom: 0;
 }
