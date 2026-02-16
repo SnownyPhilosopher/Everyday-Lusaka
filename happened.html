@@ -13,25 +13,63 @@
 
 <body class="bg-white">
 
-  <nav class="navbar nav-hero-section navbar-expand-lg sticky-top navbar-light py-1">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/img/Everyday-Lusaka-Gallery-Black-2048x1448.png" alt="Everyday Lusaka Logo" class="navbar-logo">
-      </a>
+<nav class="navbar nav-hero-section navbar-expand-lg sticky-top navbar-light py-1">
+  <div class="container">
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img
+        src="assets/img/Everyday-Lusaka-Gallery-Black-2048x1448.png"
+        alt="Everyday Lusaka Logo"
+        class="navbar-logo"
+      >
+    </a>
 
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="happening.html">Happening</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom active" href="happened.html">Happened</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Location</a></li>
-        </ul>
-      </div>
+    <!-- Mobile toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="happening.html">Happening</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="happened.html">Happened</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="contact.html">Location</a>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-custom dropdown-toggle"
+             href="#"
+             id="exploreDropdown"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Explore
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end rounded-0" aria-labelledby="exploreDropdown">
+            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+            <li><a class="dropdown-item" href="artists.html">Artists</a></li>
+            <li><a class="dropdown-item" href="publications.html">Publications</a></li>
+          </ul>
+        </li>
+
+      </ul>
     </div>
-  </nav>
+
+  </div>
+</nav>
 
 
 

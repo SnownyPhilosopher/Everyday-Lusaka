@@ -13,25 +13,64 @@
 
 <body class="bg-white">
 
-  <nav class="navbar nav-hero-section navbar-expand-lg sticky-top navbar-light py-1">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/img/Everyday-Lusaka-Gallery-Black-2048x1448.png" alt="Everyday Lusaka Logo" class="navbar-logo">
-      </a>
+<nav class="navbar nav-hero-section navbar-expand-lg sticky-top navbar-light py-1">
+  <div class="container">
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img
+        src="assets/img/Everyday-Lusaka-Gallery-Black-2048x1448.png"
+        alt="Everyday Lusaka Logo"
+        class="navbar-logo"
+      >
+    </a>
 
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="happening.html">Happening</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="happened.html">Happened</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom active" href="contact.html">Location</a></li>
-        </ul>
-      </div>
+    <!-- Mobile toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="happening.html">Happening</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="happened.html">Happened</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="contact.html">Location</a>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-custom dropdown-toggle"
+             href="#"
+             id="exploreDropdown"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Explore
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end rounded-0" aria-labelledby="exploreDropdown">
+            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+            <li><a class="dropdown-item" href="artists.html">Artists</a></li>
+            <li><a class="dropdown-item" href="publications.html">Publications</a></li>
+          </ul>
+        </li>
+
+      </ul>
     </div>
-  </nav>
+
+  </div>
+</nav>
+
 
   <section class="section-pad bg-white">
   <div class="container">
@@ -67,41 +106,7 @@
               <a class="contact-link-plain" href="mailto:hello@everydaylusaka.com">hello@everydaylusaka.com</a>
             </div>
           </div>
-
-          <!-- FOLLOW US dropdown -->
-          <div class="mb-4">
-            <div class="small text-uppercase opacity-75 mb-2">Follow Us</div>
-
-            <div class="dropdown">
-              <button class="btn btn-outline-dark rounded-0 dropdown-toggle w-100"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                @everydaylusaka
-              </button>
-
-              <ul class="dropdown-menu w-100 rounded-0">
-                <li><a class="dropdown-item" href="https://www.tiktok.com/@everydaylusaka" target="_blank">TikTok</a></li>
-                <li><a class="dropdown-item" href="https://web.facebook.com/everydaylusaka/" target="_blank">Facebook</a></li>
-                <li><a class="dropdown-item" href="https://www.instagram.com/everydaylusaka/" target="_blank">Instagram</a></li>
-                <li><a class="dropdown-item" href="https://x.com/everydaylusaka/" target="_blank">Twitter / X</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- VISIT -->
-          <div class="mb-4">
-            <div class="small text-uppercase opacity-75 mb-2">Visit</div>
-            <a class="btn btn-sun rounded-0 w-100"
-               href="https://g.co/kgs/tyCE2Ea"
-               target="_blank"
-               rel="noopener">
-              Open in Google Maps
-            </a>
-          </div>
-
-          <!-- Address -->
-          <div>
+                    <div>
             <div class="small text-uppercase opacity-75 mb-2">Address</div>
             <p class="mb-0">
               📍 Everyday Lusaka Gallery, E. W Tarry Building, Shop #5 Kalundwe Road,
@@ -109,9 +114,28 @@
             </p>
           </div>
 
+          <!-- FOLLOW US dropdown -->
+          <div class="mb-4 text-center">
+  <div class="small text-uppercase opacity-75 mb-3">Follow Us</div>
+  <div class="d-flex justify-content-center gap-3 flex-wrap">
+    <a class="social-box" href="https://www.tiktok.com/@everydaylusaka" target="_blank" aria-label="TikTok">
+      <i class="bi bi-tiktok"></i>
+    </a>
+    <a class="social-box" href="https://web.facebook.com/everydaylusaka/" target="_blank" aria-label="Facebook">
+      <i class="bi bi-facebook"></i>
+    </a>
+
+    <a class="social-box" href="https://www.instagram.com/everydaylusaka/" target="_blank" aria-label="Instagram">
+      <i class="bi bi-instagram"></i>
+    </a>
+
+    <a class="social-box" href="https://x.com/everydaylusaka/" target="_blank" aria-label="Twitter / X">
+      <i class="bi bi-twitter-x"></i>
+    </a>
+  </div>
+</div>
         </div>
       </div>
-
     </div>
   </div>
 </section>

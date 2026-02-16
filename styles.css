@@ -519,3 +519,21 @@ h4, h5, h6 {
   opacity: .8;
   margin: 0;
 }
+
+.social-box{
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(37,40,46,.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #25282E;
+  transition: all .25s ease;
+}
+
+.social-box:hover{
+  background: #FECD01;
+  color: #25282E;
+  border-color: #FECD01;
+}
