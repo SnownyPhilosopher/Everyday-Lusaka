@@ -86,6 +86,9 @@ h4, h5, h6 {
 .nav-link-custom.active::after {
   width: 100%;
 }
+.dropdown-corrected::after {
+  border-top: 0;
+}
 .navbar-logo {
   height: 64px;   /* smaller logo */
   width: auto;
