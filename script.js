@@ -61,3 +61,64 @@ rail.addEventListener("wheel", (evt) => {
   evt.preventDefault();
   rail.scrollLeft += evt.deltaY;
 });
+
+// Horizontal scroll like the artist strip: wheel scroll + buttons
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollers = document.querySelectorAll(".exhibit-hscroll");
+
+  scrollers.forEach(scroller => {
+    // Mouse wheel turns into horizontal scroll
+    scroller.addEventListener("wheel", (e) => {
+      // If user is actually scrolling sideways already, don't fight them
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+
+      e.preventDefault();
+      scroller.scrollBy({
+        left: e.deltaY * 1.2,
+        behavior: "smooth"
+      });
+    }, { passive: false });
+  });
+
+  // Button controls
+  document.querySelectorAll("[data-scroll-btn]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const targetSel = btn.getAttribute("data-target");
+      const target = document.querySelector(targetSel);
+      if (!target) return;
+
+      const dir = btn.getAttribute("data-scroll-btn");
+      const amount = Math.min(target.clientWidth * 0.85, 520);
+
+      target.scrollBy({
+        left: dir === "next" ? amount : -amount,
+        behavior: "smooth"
+      });
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("script loaded ✅");
+
+  // Wheel scroll sideways
+  document.querySelectorAll(".exhibit-hscroll").forEach((scroller) => {
+    scroller.addEventListener("wheel", (e) => {
+      // turn vertical wheel into horizontal scroll
+      e.preventDefault();
+      scroller.scrollLeft += e.deltaY;
+    }, { passive: false });
+  });
+
+  // Button scroll
+  document.querySelectorAll("[data-scroll-btn]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const targetId = btn.getAttribute("data-target");
+      const target = document.getElementById(targetId);
+      if (!target) return;
+
+      const amount = Math.min(target.clientWidth * 0.85, 520);
+      const dir = btn.getAttribute("data-scroll-btn");
+      target.scrollBy({ left: dir === "next" ? amount : -amount, behavior: "smooth" });
+    });
+  });
+});

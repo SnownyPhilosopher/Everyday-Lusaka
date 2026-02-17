@@ -630,7 +630,7 @@ font-style: normal;
   justify-content: center;
   cursor: pointer;
   z-index: 5;
-  transition: background .2s ease;
+  transition: background 0.2s ease;
 }
 
 .artist-scroll-btn:hover{
@@ -644,4 +644,131 @@ font-style: normal;
 
 .artist-scroll-btn.right{
   right: -10px;
+}
+/* Exhibition detail page */
+.exhibit-page-mainimg img{
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+.exhibit-hscroll{
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px 4px 14px;
+  border-top: 1px solid rgba(37,40,46,.12);
+  border-bottom: 1px solid rgba(37,40,46,.12);
+}
+
+.exhibit-hscroll::-webkit-scrollbar{ height: 10px; }
+.exhibit-hscroll::-webkit-scrollbar-thumb{
+  background: rgba(37,40,46,.25);
+  border-radius: 999px;
+}
+
+.exhibit-hitem{
+  flex: 0 0 auto;
+  width: min(340px, 78vw);
+  height: 230px;
+  scroll-snap-align: start;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.exhibit-hitem img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1);
+  transition: transform .45s ease;
+}
+
+.exhibit-hitem:hover img{
+  transform: scale(1.04);
+}
+
+/* Hover caption (only shows on hover) */
+.exhibit-hcap{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 12px;
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  font-size: .85rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.exhibit-hitem:hover .exhibit-hcap{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 576px){
+  .exhibit-page-mainimg img{ max-height: 380px; }
+  .exhibit-hitem{ height: 200px; }
+}
+.exhibit-hscroll{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  padding: 10px 4px 14px;
+  border-top: 1px solid rgba(37,40,46,.12);
+  border-bottom: 1px solid rgba(37,40,46,.12);
+}
+
+.exhibit-hitem{
+  flex:0 0 auto;
+  width:min(340px, 78vw);
+  height:230px;
+  position:relative;
+  scroll-snap-align:start;
+  overflow:hidden;
+  text-decoration:none;
+}
+
+.exhibit-hitem img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transform:scale(1);
+  transition:transform .45s ease;
+}
+
+.exhibit-hitem:hover img{ transform:scale(1.04); }
+
+.exhibit-hcap{
+  position:absolute;
+  left:0; bottom:0;
+  width:100%;
+  padding:10px 12px;
+  background:rgba(0,0,0,.55);
+  color:#fff;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:.85rem;
+  opacity:0;
+  transform:translateY(6px);
+  transition:opacity .25s ease, transform .25s ease;
+}
+
+.exhibit-hitem:hover .exhibit-hcap{
+  opacity:1;
+  transform:translateY(0);
 }
