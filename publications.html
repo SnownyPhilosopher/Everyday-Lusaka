@@ -14,38 +14,61 @@
 <body class="bg-white">
 
   <!-- NAV -->
-  <nav class="navbar nav-hero-section navbar-expand-lg sticky-top navbar-light py-1">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/img/Everyday-Lusaka-Gallery-Black-2048x1448.png" alt="Everyday Lusaka Logo" class="navbar-logo">
-      </a>
+ <nav class="navbar nav-hero-section navbar-expand-lg sticky-top navbar-light py-1">
+  <div class="container">
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img
+        src="assets/Logo/Everyday Lusaka Gallery Black.png"
+        alt="Everyday Lusaka Logo"
+        class="navbar-logo"
+      >
+    </a>
 
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="happening.html">Happening</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="happened.html">Happened</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Location</a></li>
+    <!-- Mobile toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link nav-link-custom dropdown-toggle active" href="#" id="exploreDropdown" role="button"
-               data-bs-toggle="dropdown" aria-expanded="false">
-              Explore
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end rounded-0" aria-labelledby="exploreDropdown">
-              <li><a class="dropdown-item" href="about.html">About Us</a></li>
-              <li><a class="dropdown-item" href="artists.html">Artists</a></li>
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="happening.html">Happening</a>
+        </li>
+
+                <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-custom dropdown-toggle"
+             href="#"
+             id="exploreDropdown"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Happened
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end rounded-0" aria-labelledby="exploreDropdown">
+ <li><a class="dropdown-item" href="happened.html">Past Exhibitions</a></li>
               <li><a class="dropdown-item" href="publications.html">Publications</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+              <li><a class="dropdown-item" href="conversations.html">Conversations</a></li>
+              <li><a class="dropdown-item" href="fellowships.html">Fellowships</a></li>
+               <li><a class="dropdown-item" href="external_exhibitions.html">External Exhibitions</a></li>
+          </ul>
+        </li>
 
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="contact.html">Location</a>
+        </li>
+
+      </ul>
     </div>
-  </nav>
+
+  </div>
+</nav>
 
   <!-- TITLE -->
   <section class="section-pad bg-white">
@@ -55,150 +78,204 @@
     </div>
   </section>
 
-  <!-- LIST -->
-  <section>
-    <div class="container">
-      <div class="row g-3">
+<!-- LIST -->
+<section>
+  <div class="container">
+    <div class="pub-list">
 
-        <!-- Helper template:
-             - use .btn-outline-dark for downloads
-             - use .btn-sun (if you have it) or .btn-outline-dark for links
-        -->
-
-        <div class="col-md-6 col-lg-6">
-          <div class="pub-card h-100">
+      <div class="pub-row-card">
+        <div class="row align-items-center g-3">
+          <div class="col-md-9">
             <h3 class="pub-title">“The Counter-Archive”</h3>
-            <p class="pub-meta mb-3">Sometimes Magazine: The Zamrock Issue</p>
-            <button class="btn btn-outline-dark rounded-0 btn-sm w-100" disabled>Download (optional)</button>
+            <p class="pub-meta mb-0">Sometimes Magazine: The Zamrock Issue</p>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <a class="btn btn-outline-dark rounded-0 btn-sm" href="https://desertdazesound.com/release/382132-witch-lp-sometimes-magazine-the-zamrock-issue-toloka-flexi-disc?lang=en_GB" target="_blank">View</a>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="pub-card h-100">
+      <div class="pub-row-card">
+        <div class="row align-items-center g-3">
+          <div class="col-md-9">
             <h3 class="pub-title">Cambridge Journal of Visual Culture</h3>
-            <p class="pub-meta mb-3">Vol. 2</p>
-            <button class="btn btn-outline-dark rounded-0 btn-sm w-100" disabled>Download (optional)</button>
+            <p class="pub-meta mb-0">Vol. 2</p>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="pub-card h-100">
+      <div class="pub-row-card">
+        <div class="row align-items-center g-3">
+          <div class="col-md-9">
             <h3 class="pub-title">“Roadmapping History”</h3>
-            <p class="pub-meta mb-3">Gida Journal Vol. 3 with Banji Chona</p>
-            <button class="btn btn-outline-dark rounded-0 btn-sm w-100" disabled>Download (optional)</button>
+            <p class="pub-meta mb-0">Gida Journal Vol. 3 with Banji Chona</p>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <a class="btn btn-outline-dark rounded-0 btn-sm" href="https://gidajournal.com/" target="_blank">View</a>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="pub-card h-100">
-            <h3 class="pub-title">“Zambia/ Memory and photography …”</h3>
-            <p class="pub-meta mb-3">Kabila Stephane for ZoMag</p>
-            <button class="btn btn-outline-dark rounded-0 btn-sm w-100" disabled>Download (optional)</button>
+      <div class="pub-row-card">
+        <div class="row align-items-center g-3">
+          <div class="col-md-9">
+            <h3 class="pub-title">“Zambia/ Memory and photography / Sana Ginwala / IN OUR HOMES, THE SUBJECT OF OUR MUSEUMS”</h3>
+            <p class="pub-meta mb-0">Kabila Stephane for ZoMag</p>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <a class="btn btn-outline-dark rounded-0 btn-sm" href="https://zoes.fr/2022/03/11/zambia-memory-and-photography-sana-ginwala-in-our-homes-the-subject-of-our-museums/" target="_blank">View</a>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="pub-card h-100">
+      <div class="pub-row-card">
+        <div class="row align-items-center g-3">
+          <div class="col-md-9">
             <h3 class="pub-title">Rediscovered Stories from the Zambian Fine Art Studios</h3>
-            <p class="pub-meta mb-3">Colin Pantall for Blind Magazine</p>
-            <button class="btn btn-outline-dark rounded-0 btn-sm w-100" disabled>Download (optional)</button>
+            <p class="pub-meta mb-0">Colin Pantall for Blind Magazine</p>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <a class="btn btn-outline-dark rounded-0 btn-sm" href="https://www.blind-magazine.com/en/stories/rediscovered-stories-from-the-zambian-fine-art-studios/" target="_blank">View</a>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="pub-card h-100">
+      <div class="pub-row-card">
+        <div class="row align-items-center g-3">
+          <div class="col-md-9">
             <h3 class="pub-title">“Home is Enveloping Me”</h3>
-            <p class="pub-meta mb-3">Sana Ginwalla for ZedEssays</p>
-            <button class="btn btn-outline-dark rounded-0 btn-sm w-100" disabled>Download (optional)</button>
+            <p class="pub-meta mb-0">Sana Ginwalla for ZedEssays</p>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <a class="btn btn-outline-dark rounded-0 btn-sm" href="https://zedessays.substack.com/p/sana-ginwalla-everyday-lusaka" target="_blank">View</a>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="pub-card h-100">
+      <div class="pub-row-card">
+        <div class="row align-items-center g-3">
+          <div class="col-md-9">
             <h3 class="pub-title">“Un jeu de memory”</h3>
-            <p class="pub-meta mb-3">Le Temps by Zoubier Harbaoui</p>
-            <button class="btn btn-outline-dark rounded-0 btn-sm w-100" disabled>Download (optional)</button>
+            <p class="pub-meta mb-0">Le Temps by Zoubier Harbaoui</p>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <a class="btn btn-outline-dark rounded-0 btn-sm" href="https://www.pressreader.com/tunisia/le-temps-tunisia/20221213/281715503660591" target="_blank">View</a>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="pub-card h-100">
+      <div class="pub-row-card">
+        <div class="row align-items-center g-3">
+          <div class="col-md-9">
             <h3 class="pub-title">Interview With The Name of The Next Song</h3>
-            <p class="pub-meta mb-3">Interview</p>
-            <button class="btn btn-outline-dark rounded-0 btn-sm w-100" disabled>Download (optional)</button>
+            <p class="pub-meta mb-0">Interview</p>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <a class="btn btn-outline-dark rounded-0 btn-sm" href="https://www.tnotns.com/sanaginwalla" target="_blank">View</a>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="pub-card h-100">
+      <div class="pub-row-card">
+        <div class="row align-items-center g-3">
+          <div class="col-md-9">
             <h3 class="pub-title">“All aboard the LuCAC express”</h3>
-            <p class="pub-meta mb-3">Chaze Matakala for Latitudes</p>
-            <button class="btn btn-outline-dark rounded-0 btn-sm w-100" disabled>Download (optional)</button>
+            <p class="pub-meta mb-0">Chaze Matakala for Latitudes</p>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <a class="btn btn-outline-dark rounded-0 btn-sm" href="https://editorial.latitudes.online/blog/posts/all-aboard-the-lucac-express/" target="_blank">View</a>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="pub-card h-100">
-            <h3 class="pub-title">“Bamako Encounters …”</h3>
-            <p class="pub-meta mb-3">Financial Times by Joshua Surtees</p>
-            <button class="btn btn-outline-dark rounded-0 btn-sm w-100" disabled>Download (optional)</button>
+      <div class="pub-row-card">
+        <div class="row align-items-center g-3">
+          <div class="col-md-9">
+            <h3 class="pub-title">“Bamako Encounters photography festival pulsates with revolutionary spirit”</h3>
+            <p class="pub-meta mb-0">Financial Times by Joshua Surtees</p>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <a class="btn btn-outline-dark rounded-0 btn-sm" href="https://www.ft.com/content/1ae4e626-a3bc-4647-85fd-e59638425cb5" target="_blank">View</a>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="pub-card h-100">
+      <div class="pub-row-card">
+        <div class="row align-items-center g-3">
+          <div class="col-md-9">
             <h3 class="pub-title">“Calculated Damage: The Studio Stool”</h3>
-            <p class="pub-meta mb-3">Hapax Magazine Issue 2 • Commission with David Daut Makala</p>
-            <button class="btn btn-outline-dark rounded-0 btn-sm w-100" disabled>Download (optional)</button>
+            <p class="pub-meta mb-0">Hapax Magazine Issue 2 • Commission with David Daut Makala</p>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <a class="btn btn-outline-dark rounded-0 btn-sm" href="https://leporello-books.com/en/prodotto/hapax-magazine-issue-2/" target="_blank">View</a>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="pub-card h-100">
+      <div class="pub-row-card">
+        <div class="row align-items-center g-3">
+          <div class="col-md-9">
             <h3 class="pub-title">“Zambia Belonging”</h3>
-            <p class="pub-meta mb-3">Sana Ginwalla for Nkwazi Magazine 2022</p>
-            <button class="btn btn-outline-dark rounded-0 btn-sm w-100" disabled>Download (optional)</button>
+            <p class="pub-meta mb-0">Sana Ginwalla for Nkwazi Magazine 2022</p>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <a class="btn btn-outline-dark rounded-0 btn-sm" href="https://interactive.nkwazimagazine.com/what-is-zambia-belonging/" target="_blank">View</a>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="pub-card h-100">
+      <div class="pub-row-card">
+        <div class="row align-items-center g-3">
+          <div class="col-md-9">
             <h3 class="pub-title">“Everyday Lusaka Gallery: The Universal Language of Art”</h3>
-            <p class="pub-meta mb-3">Mukandi Siame for Nkwazi Magazine, 2024</p>
-            <button class="btn btn-outline-dark rounded-0 btn-sm w-100" disabled>Download (optional)</button>
+            <p class="pub-meta mb-0">Mukandi Siame for Nkwazi Magazine, 2024</p>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <a class="btn btn-outline-dark rounded-0 btn-sm" href="https://www.nkwazimagazine.com/everyday-lusaka-gallery-the-universal-language-of-art/" target="_blank">View</a>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6 col-lg-6">
-          <div class="pub-card h-100">
+      <div class="pub-row-card">
+        <div class="row align-items-center g-3">
+          <div class="col-md-9">
             <h3 class="pub-title">4CNRS Zine</h3>
-            <p class="pub-meta mb-3">Zine</p>
-            <button class="btn btn-outline-dark rounded-0 btn-sm w-100" disabled>Download (optional)</button>
+            <p class="pub-meta mb-0">Zine</p>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <a class="btn btn-outline-dark rounded-0 btn-sm" href="https://visulekabunda.com/4cnrs-cape-town" target="_blank">View</a>
           </div>
         </div>
+      </div>
 
-        <!-- External link item -->
-        <div class="col-md-6 col-lg-6">
-          <div class="pub-card h-100">
+      <!-- External link item -->
+      <div class="pub-row-card">
+        <div class="row align-items-center g-3">
+          <div class="col-md-9">
             <h3 class="pub-title">Everyday Lusaka Gallery</h3>
-            <p class="pub-meta mb-3">La politica e la poetica del quotidiano</p>
-            <a class="btn btn-outline-dark rounded-0 btn-sm w-100"
+            <p class="pub-meta mb-0">La politica e la poetica del quotidiano</p>
+          </div>
+          <div class="col-md-3 text-md-end">
+            <a class="btn btn-outline-dark rounded-0 btn-sm"
                href="https://spaghettiboost.com/magazine/everyday-lusaka-gallery-la-politica-e-la-poetica-del-quotidiano"
                target="_blank" rel="noopener">
               Read Online
             </a>
           </div>
         </div>
-
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <!-- FOOTER -->
   <footer class="footer-section">
     <div class="container text-center py-5">
       <div class="mx-auto mb-5 text-center">
-        <img src="assets/img/Everyday Lusaka Gallery White.png" alt="Everyday Lusaka Logo" class="footer-logo-img">
+        <img src="assets/Logo/Everyday Lusaka Gallery White.png" alt="Everyday Lusaka Logo" class="footer-logo-img">
       </div>
 
       <p class="footer-text mb-4">

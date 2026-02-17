@@ -43,3 +43,21 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", setActive, { passive: true });
   setActive();
 });
+
+const rail = document.getElementById("artistRail");
+const leftBtn = document.querySelector(".artist-scroll-btn.left");
+const rightBtn = document.querySelector(".artist-scroll-btn.right");
+
+leftBtn.addEventListener("click", () => {
+  rail.scrollBy({ left: -300, behavior: "smooth" });
+});
+
+rightBtn.addEventListener("click", () => {
+  rail.scrollBy({ left: 300, behavior: "smooth" });
+});
+
+/* Optional: make mouse wheel scroll horizontally */
+rail.addEventListener("wheel", (evt) => {
+  evt.preventDefault();
+  rail.scrollLeft += evt.deltaY;
+});
