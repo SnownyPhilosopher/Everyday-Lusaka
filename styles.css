@@ -106,16 +106,12 @@ font-style: normal;
 }
 
 /* Yellow overlay styling */
-.hero-caption-box {
-  color: #ffffff;
-  max-width: 560px;
-  font-weight: 300;
-  line-height: 1.5;
-  position: absolute;
-  top: 50%;
-  left: 25%;              /* move right here */
-  transform: translate(-50%, -50%);
+.hero-main{
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
 }
+
 
 .happening-copy{
   max-width: 560px;
@@ -305,97 +301,86 @@ font-style: normal;
   opacity: 0.8;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  width: 60px;
-}
+/* =========================
+   HERO SECTION (Single Image)
+   ========================= */
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-size: 60% 60%;
-  filter: invert(1); /* makes arrows white */
-  background-color: rgba(37, 40, 46, 0.55); /* dark circle */
-  border-radius: 50%;
-  padding: 18px;
-}
-
-/* Subtle hover effect */
-.carousel-control-prev:hover .carousel-control-prev-icon,
-.carousel-control-next:hover .carousel-control-next-icon {
-  background-color: rgba(37, 40, 46, 0.8);
-}
-
-@media (max-width: 768px) {
-  .hero-caption-box {
-    position: static !important;
-    transform: none !important;
-    margin: 1rem;
-  }
-}
-
-/* Make the carousel act like a hero section */
-#heroCarousel .carousel-item{
-  height: 85vh;
+.hero-section{
   position: relative;
+  height: 90vh;
   overflow: hidden;
 }
 
-/* This is the "locked" image */
-#heroCarousel .carousel-bg{
-  position:absolute;
-  inset:0;
-  background-size:cover;
-  background-position:center;
-  background-attachment:fixed;
-}
-
-#heroCarousel .carousel-bg::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.45);
-}
-
-/* Keep your caption above the image */
-.hero-caption-box{
-  z-index: 5;
-}
-
-/* Mobile fallback (some phones ignore fixed backgrounds) */
-@media (max-width: 768px){
-  #heroCarousel .carousel-bg{
-    background-attachment: scroll;
-  }
-}
-.hero-single{
-  height: 85vh;
-  overflow: hidden;
-}
-
-.hero-single-bg{
+/* Background image */
+.hero-bg{
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
 }
 
-/* Black tint */
-.hero-single-bg::after{
+/* Dark overlay */
+.hero-bg::after{
   content:"";
   position:absolute;
   inset:0;
-  background: rgba(0,0,0,.45);
+  background: rgba(0,0,0,.20);
 }
 
+/* Centered content */
+.hero-content{
+  position: relative;
+  z-index: 5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
 
-/* Mobile: drop caption below image if needed */
+.hero-title{
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle{
+  max-width: 650px;
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+  opacity: .9;
+}
+
+/* Minimal button */
+.hero-btn{
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid rgba(255,255,255,.8);
+  color: #fff;
+  text-decoration: none;
+  font-size: .85rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  transition: all .25s ease;
+}
+
+.hero-btn:hover{
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+/* Mobile adjustments */
 @media (max-width: 768px){
-  .hero-single{ height: auto; }
-  .hero-single-bg{ position: relative; height: 55vh; }
-  .hero-caption-box{
-    position: static;
-    transform: none;
-    margin: 16px;
+  .hero-section{
+    height: 75vh;
+  }
+
+  .hero-subtitle{
+    font-size: 1rem;
   }
 }
 
@@ -648,7 +633,6 @@ font-style: normal;
 /* Exhibition detail page */
 .exhibit-page-mainimg img{
   width: 100%;
-  max-height: 520px;
   object-fit: cover;
   display: block;
 }
@@ -660,7 +644,7 @@ font-style: normal;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding: 10px 4px 14px;
+  padding: 10px 4px 3rem;
   border-top: 1px solid rgba(37,40,46,.12);
   border-bottom: 1px solid rgba(37,40,46,.12);
 }
@@ -671,23 +655,28 @@ font-style: normal;
   border-radius: 999px;
 }
 
-.exhibit-hitem{
+.exhibit-hitem {
   flex: 0 0 auto;
-  width: min(340px, 78vw);
-  height: 230px;
+  width: min(360px, 78vw);
+  max-height: 400px;
   scroll-snap-align: start;
   position: relative;
   text-decoration: none;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.exhibit-hitem img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+
+
+.exhibit-hitem img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   display: block;
-  transform: scale(1);
-  transition: transform .45s ease;
 }
 
 .exhibit-hitem:hover img{
@@ -717,7 +706,7 @@ font-style: normal;
 }
 
 @media (max-width: 576px){
-  .exhibit-page-mainimg img{ max-height: 380px; }
+  .exhibit-page-mainimg img{ max-height: 540px; }
   .exhibit-hitem{ height: 200px; }
 }
 .exhibit-hscroll{
@@ -730,26 +719,12 @@ font-style: normal;
   padding: 10px 4px 14px;
   border-top: 1px solid rgba(37,40,46,.12);
   border-bottom: 1px solid rgba(37,40,46,.12);
+
+  white-space: nowrap;        /* IMPORTANT */
 }
 
-.exhibit-hitem{
-  flex:0 0 auto;
-  width:min(340px, 78vw);
-  height:230px;
-  position:relative;
-  scroll-snap-align:start;
-  overflow:hidden;
-  text-decoration:none;
-}
 
-.exhibit-hitem img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transform:scale(1);
-  transition:transform .45s ease;
-}
+
 
 .exhibit-hitem:hover img{ transform:scale(1.04); }
 
@@ -771,4 +746,18 @@ font-style: normal;
 .exhibit-hitem:hover .exhibit-hcap{
   opacity:1;
   transform:translateY(0);
+}
+.btn-back-happening{
+  display: inline-block;
+  padding: 10px 0;
+  letter-spacing: .14em;
+  text-decoration: none;
+  color: #25282E;
+  border-bottom: 1px solid #25282E;
+  transition: all .25s ease;
+}
+
+.btn-back-happening:hover{
+  color: #FECD01;
+  border-color: #FECD01;
 }
